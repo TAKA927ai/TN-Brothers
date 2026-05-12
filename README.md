@@ -1,7 +1,10 @@
 # TN Brothers - Official Website
 
-> 香港系グローバル投資会社 TN Brothers の公式Webサイト  
-> 黒ベース × ゴールドアクセント の超高級デザイン
+> 香港系グローバル投資会社 TN Brothers の公式Webサイト
+> 黒ベース x ゴールドアクセント x 超高級デザイン
+> EN / JP 多言語対応 · Vercel公開済み
+
+公開URL: https://tn-brothers.vercel.app
 
 ---
 
@@ -10,121 +13,122 @@
 ```
 tn-brothers/
 ├── index.html        ← TOPページ
-├── company.html      ← 会社概要ページ
-├── investment.html   ← 投資分野ページ
-├── contact.html      ← お問い合わせページ
-├── style.css         ← 全ページ共通スタイル
-├── script.js         ← 全ページ共通JavaScript
-└── README.md         ← このファイル
+├── company.html      ← 会社概要
+├── investment.html   ← 投資分野
+├── contact.html      ← お問い合わせ
+├── privacy.html      ← プライバシーポリシー（EN/JP）
+├── terms.html        ← 利用規約（EN/JP）
+├── style.css         ← 共通スタイル
+├── script.js         ← 多言語・エフェクト
+├── README.md         ← このファイル
+└── assets/
+    └── videos/
+        └── hero.mp4  ← ヒーロー動画（置くだけで有効）
 ```
 
 ---
 
-## GitHub へのアップロード方法
+## GitHubへのアップロード方法
 
-### 手順1. GitHub でリポジトリを作成
+### 新規リポジトリの場合
 
-1. [github.com](https://github.com) にログイン
-2. 右上の「＋」→「New repository」をクリック
-3. Repository name に `tn-brothers`（任意）と入力
-4. 「Create repository」をクリック
+1. github.com にログイン
+2. 右上「+」→「New repository」→名前入力→「Create repository」
+3. 「Add file」→「Upload files」
+4. 全ファイルをドラッグ＆ドロップ
+5. 「Commit changes」をクリック
 
-### 手順2. ファイルをアップロード
+### ファイルを更新する場合
 
-1. 作成したリポジトリを開く
-2. 「Add file」→「Upload files」をクリック
-3. 以下の7ファイルをすべてドラッグ＆ドロップ：
-   - `index.html`
-   - `company.html`
-   - `investment.html`
-   - `contact.html`
-   - `style.css`
-   - `script.js`
-   - `README.md`
-4. 「Commit changes」をクリック
+1. 「Add file」→「Upload files」で同名ファイルをアップロード（上書き）
+2. 「Commit changes」をクリック
+3. Vercelが自動で再デプロイします
 
 ---
 
-## Vercel での公開方法
+## Vercelでの公開方法
 
-### 手順1. Vercel にログイン
+1. vercel.com を開いてGitHubでログイン
+2. 「Add New」→「Project」
+3. リポジトリ「tn-brothers」を選択→「Import」
+4. 設定はデフォルトのまま「Deploy」
+5. 数分後に https://tn-brothers.vercel.app で公開完了
 
-1. [vercel.com](https://vercel.com) を開く
-2. 「Continue with GitHub」でログイン
+---
 
-### 手順2. プロジェクトをインポート
+## 動画背景の変更方法
 
-1. ダッシュボードで「Add New」→「Project」
-2. GitHub リポジトリ一覧から `tn-brothers` を選択
-3. 「Import」をクリック
-4. 設定はそのまま「Deploy」をクリック
+### 動画ファイルを準備
 
-### 手順3. 公開完了
+- フォーマット：MP4（H.264推奨）
+- 推奨サイズ：1920x1080px
+- 5MB以下を推奨
+- 無料素材：pexels.com で「city night」検索
 
-- 数分後に `https://tn-brothers.vercel.app` のような URL で公開されます
-- GitHub に変更を Push するたびに自動的に更新されます
+### 設定方法
+
+1. assets/videos/hero.mp4 として配置
+2. index.html を開いて以下のコメントを外す：
+
+```html
+<!-- コメントを外す（<!-- と --> を削除） -->
+<video class="hero-video" autoplay muted loop playsinline>
+  <source src="assets/videos/hero.mp4" type="video/mp4">
+</video>
+```
 
 ---
 
 ## 文章の変更方法
 
-### キャッチコピーを変更したい場合
+全ページの文言は script.js の LANG オブジェクトで管理しています。
 
-`index.html` を開き、以下の部分を探して変更します：
-
-```html
-<!-- メインタイトル ここを変更 -->
-<h1 class="hero-title">
-  Building Long-Term<br>
-  <em>Value Beyond Borders</em>
-</h1>
+```javascript
+const LANG = {
+  en: {
+    hero_title1: 'Building Long-Term',  // ← 英語テキストを変更
+    hero_title2: 'Value Beyond Borders',
+  },
+  jp: {
+    hero_title1: '国境を越えた',         // ← 日本語テキストを変更
+    hero_title2: '長期的価値の創造',
+  }
+};
 ```
 
-### 会社紹介文を変更したい場合
-
-`index.html` の以下の部分を変更します：
-
-```html
-<!-- 会社紹介文 ここを変更 -->
-<p class="about-text fade-in">
-  TN Brothers is a global investment company based in Hong Kong.
-  ...
-</p>
-```
-
-### ナビゲーションのリンク名を変更したい場合
-
-`index.html`（および各ページ）の以下の部分を変更します：
-
-```html
-<ul class="nav-links">
-  <li><a href="company.html">Company</a></li>      ← ここを変更
-  <li><a href="investment.html">Investment</a></li> ← ここを変更
-  <li><a href="contact.html">Contact</a></li>       ← ここを変更
-</ul>
-```
+ここを編集するだけで全ページの文言が一括で変わります。
 
 ---
 
-## お問い合わせフォームの設定方法（Formspree）
+## ロゴの変更方法
 
-現在のフォームはダミー（実際にメールは届きません）です。  
-実際にメールを受け取るには以下の手順で設定します。
+### 方法A：画像ファイルに置き換える
 
-### 手順1. Formspree でアカウント作成
+1. ロゴ画像を assets/images/logo.svg として保存
+2. 各HTMLのナビロゴ部分を変更：
 
-1. [formspree.io](https://formspree.io) を開く
-2. 「Sign Up」でアカウント作成（無料プランあり）
+```html
+<!-- 変更前 -->
+<svg class="nav-logo-mark" viewBox="0 0 40 40">...</svg>
 
-### 手順2. フォームを作成
+<!-- 変更後 -->
+<img src="assets/images/logo.svg" alt="TN Brothers" class="nav-logo-mark">
+```
 
-1. ダッシュボードで「New Form」をクリック
-2. フォームの名前を入力して作成
-3. 表示される Endpoint URL をコピー（例：`https://formspree.io/f/xabcdefg`）
+### 方法B：SVGコードを直接編集
 
-### 手順3. contact.html を編集
+各HTMLファイルのナビ内 `<svg class="nav-logo-mark">` のコードを変更します。
 
-`contact.html` を開き、form タグを以下のように変更します：
+---
+
+## お問い合わせフォームの接続方法
+
+現在はデモ表示のみ。実際にメールを受け取るには Formspree を使用します。
+
+1. formspree.io で無料アカウント作成
+2. 「New Form」を作成してエンドポイントURLを取得
+   例：https://formspree.io/f/xabcdefg
+3. contact.html の form タグを変更：
 
 ```html
 <!-- 変更前 -->
@@ -134,87 +138,57 @@ tn-brothers/
 <form id="contactForm" action="https://formspree.io/f/xabcdefg" method="POST">
 ```
 
-### 手順4. 確認
-
-- フォームを送信すると、Formspree に登録したメールアドレスに届きます
-- 無料プランは月50件まで受信可能
-
----
-
-## メールアドレスの変更方法
-
-`contact.html` の以下の部分を変更します：
-
-```html
-<!-- メールアドレス ここを変更 -->
-<div class="contact-detail-value">contact@tnbrothers.com</div>
-```
-
----
-
-## 色・デザインの変更方法
-
-`style.css` の先頭にある CSS変数を変更します：
-
-```css
-:root {
-  /* ゴールドの色を変えたい場合 */
-  --color-gold:       #c9a84c;   ← ここを変更
-  --color-gold-light: #e8c97a;   ← ここを変更
-
-  /* 背景の黒を変えたい場合 */
-  --color-black:      #020304;   ← ここを変更
-}
-```
+無料プランは月50件まで受信可能。
 
 ---
 
 ## カウンター数値の変更方法
 
-`index.html` の以下の部分の数値を変更します：
+index.html の以下の数値を変更：
 
 ```html
-<!-- data-counter="数値" を変更するとカウンターが変わります -->
-<span data-counter="48" data-suffix="+">0+</span>  ← 48 を変更
-<span data-counter="32" data-suffix="+">0+</span>  ← 32 を変更
-<span data-counter="18" data-suffix="+">0+</span>  ← 18 を変更
-<span data-counter="10" data-suffix="Y+">0Y+</span> ← 10 を変更
+<span data-counter="48"  data-suffix="+">0+</span>
+<span data-counter="32"  data-suffix="+">0+</span>
+<span data-counter="18"  data-suffix="+">0+</span>
+<span data-counter="120" data-suffix="+">0+</span>
 ```
 
 ---
 
-## 動画背景の追加方法
+## 色の変更方法
 
-ヒーローセクションに動画を追加したい場合：
+style.css の先頭 CSS変数を変更：
 
-1. `assets/videos/` フォルダを作成
-2. 動画ファイル（`hero.mp4`）を配置
-3. `index.html` の以下のコメントを外します：
-
-```html
-<!-- コメントを外す（<!-- と --> を削除） -->
-<video class="hero-video" autoplay muted loop playsinline>
-  <source src="assets/videos/hero.mp4" type="video/mp4">
-</video>
+```css
+:root {
+  --color-gold:       #c9a84c;  /* メインゴールド */
+  --color-gold-light: #e8c97a;  /* 明るいゴールド */
+  --color-black:      #020304;  /* 背景の黒 */
+}
 ```
-
-> 💡 動画素材は [Pexels](https://pexels.com) や [Pixabay](https://pixabay.com) で「city night」などで検索すると無料で入手できます
 
 ---
 
 ## よくある質問
 
-### Q. スマートフォンで表示が崩れる
-A. ブラウザを更新してみてください。それでも崩れる場合は `style.css` のレスポンシブ部分（ファイル末尾）を確認してください。
+Q. スマートフォンで崩れる
+A. ブラウザを更新してください。style.css 末尾のレスポンシブ設定を確認。
 
-### Q. フォントが表示されない
-A. インターネット接続が必要です。Google Fonts を使用しているため、オフライン環境では代替フォントが表示されます。
+Q. 言語が切り替わらない
+A. JavaScriptが有効か確認。ブラウザのコンソールでエラーを確認。
 
-### Q. ローディングが終わらない
-A. `script.js` の `setTimeout` の数値（`2300`）を調整してください。
+Q. Vercelで404が出る
+A. index.html がリポジトリのルートに置かれているか確認。
 
 ---
 
-## ライセンス
+## 技術仕様
+
+- 使用技術：HTML5 / CSS3 / Vanilla JavaScript
+- フォント：Cormorant Garamond / Montserrat / Noto Serif JP
+- 多言語：英語（デフォルト）/ 日本語
+- ホスティング：Vercel（無料プラン対応）
+
+---
 
 © 2025 TN Brothers. All Rights Reserved.

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       TN BROTHERS - index.html (TOPページ)
+       ここの情報を変更すれば基本情報が変わります
+  ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TN Brothers - Global Investment Company based in Hong Kong. Strategic investments in real estate, healthcare, energy, hospitality and food businesses.">
+  <meta name="keywords"    content="TN Brothers, investment, Hong Kong, global investment, real estate, healthcare, energy, hospitality">
+  <meta property="og:title"       content="TN Brothers | Global Investment Company">
+  <meta property="og:description" content="Building Long-Term Value Beyond Borders">
+  <meta property="og:type"        content="website">
+  <title>TN Brothers | Global Investment Company</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- ファビコン（SVGインライン） -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23020304'/><text y='24' x='3' font-size='22' fill='%23c9a84c' font-family='serif' font-weight='300'>T</text></svg>">
+</head>
+<body>
+
+  <!-- ============================================================
+       ローディング画面
+  ============================================================ -->
+  <div id="loading">
+    <div class="loading-logo">TN Brothers</div>
+    <div class="loading-bar-wrap">
+      <div class="loading-bar"></div>
+    </div>
+    <div class="loading-text">Hong Kong · Global Investment</div>
+  </div>
+
+  <!-- ============================================================
+       モバイルメニュー
+  ============================================================ -->
+  <nav class="mobile-menu" aria-label="Mobile Navigation">
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="investment.html">Investment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+       ナビゲーション
+  ============================================================ -->
+  <header id="navbar" role="banner">
+    <!-- ロゴ -->
+    <a href="index.html" class="nav-logo" aria-label="TN Brothers Home">
+      <!-- SVGロゴマーク（TNを象徴するシンプルな幾何学デザイン） -->
+      <svg class="nav-logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="0.5" y="0.5" width="39" height="39" stroke="#c9a84c" stroke-width="0.5" opacity="0.35"/>
+        <!-- T の縦線 -->
+        <line x1="7"  y1="8"  x2="7"  y2="32" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- T の横線 -->
+        <line x1="7"  y1="8"  x2="21" y2="8"  stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- T の中間線 -->
+        <line x1="7"  y1="20" x2="16" y2="20" stroke="#c9a84c" stroke-width="0.9" opacity="0.6"/>
+        <!-- N の縦線（左） -->
+        <line x1="26" y1="8"  x2="26" y2="32" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- N の縦線（右） -->
+        <line x1="33" y1="8"  x2="33" y2="32" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- N の斜め線 -->
+        <line x1="26" y1="8"  x2="33" y2="32" stroke="#c9a84c" stroke-width="0.9" opacity="0.7"/>
+      </svg>
+      <span class="nav-logo-text">TN <span>Brothers</span></span>
+    </a>
+
+    <!-- ナビリンク（デスクトップ） -->
+    <ul class="nav-links" role="navigation" aria-label="Main Navigation">
+      <li><a href="company.html">Company</a></li>
+      <li><a href="investment.html">Investment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- ハンバーガーボタン（モバイル） -->
+    <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- ============================================================
+       ヒーローセクション
+  ============================================================ -->
+  <section class="hero" aria-label="Hero">
+
+    <!-- 背景グラデーション -->
+    <div class="hero-bg"></div>
+
+    <!-- グリッドライン装飾 -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <!-- 下部フェードオーバーレイ -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- メインコンテンツ -->
+    <div class="hero-content">
+
+      <!-- ラベル -->
+      <div class="hero-label">
+        Global Investment Company &nbsp;·&nbsp; Hong Kong
+      </div>
+
+      <!-- メインタイトル
+           ここのテキストを変更するとキャッチコピーが変わります -->
+      <h1 class="hero-title">
+        Building Long-Term<br>
+        <em>Value Beyond Borders</em>
+      </h1>
+
+      <!-- サブタイトル -->
+      <p class="hero-sub">
+        Strategic Investments For The Future
+      </p>
+
+      <!-- CTAボタン -->
+      <a href="contact.html" class="hero-cta">
+        Get In Touch
+        <span class="arrow-right" aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <!-- スクロールインジケーター -->
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-text">Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       実績カウンターセクション
+  ============================================================ -->
+  <section style="background: var(--color-black-card); border-top: var(--border-gold); border-bottom: var(--border-gold); padding: 80px 60px;" aria-label="Statistics">
+    <div style="max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;">
+
+      <!-- カウンター1 -->
+      <div class="fade-in" style="padding: 36px; text-align: center; border-right: var(--border-gold);">
+        <span style="font-family: var(--font-display); font-size: clamp(44px, 5vw, 68px); font-weight: 300; color: var(--color-gold); display: block; line-height: 1; margin-bottom: 10px;">
+          <span data-counter="48" data-suffix="+">0+</span>
+        </span>
+        <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-silver-dim);">
+          Investment Projects
+        </span>
+      </div>
+
+      <!-- カウンター2 -->
+      <div class="fade-in" style="padding: 36px; text-align: center; border-right: var(--border-gold); transition-delay: 0.1s;">
+        <span style="font-family: var(--font-display); font-size: clamp(44px, 5vw, 68px); font-weight: 300; color: var(--color-gold); display: block; line-height: 1; margin-bottom: 10px;">
+          <span data-counter="32" data-suffix="+">0+</span>
+        </span>
+        <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-silver-dim);">
+          Strategic Partners
+        </span>
+      </div>
+
+      <!-- カウンター3 -->
+      <div class="fade-in" style="padding: 36px; text-align: center; border-right: var(--border-gold); transition-delay: 0.2s;">
+        <span style="font-family: var(--font-display); font-size: clamp(44px, 5vw, 68px); font-weight: 300; color: var(--color-gold); display: block; line-height: 1; margin-bottom: 10px;">
+          <span data-counter="18" data-suffix="+">0+</span>
+        </span>
+        <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-silver-dim);">
+          Countries Reached
+        </span>
+      </div>
+
+      <!-- カウンター4 -->
+      <div class="fade-in" style="padding: 36px; text-align: center; transition-delay: 0.3s;">
+        <span style="font-family: var(--font-display); font-size: clamp(44px, 5vw, 68px); font-weight: 300; color: var(--color-gold); display: block; line-height: 1; margin-bottom: 10px;">
+          <span data-counter="10" data-suffix="Y+">0Y+</span>
+        </span>
+        <span style="font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--color-silver-dim);">
+          Years Of Experience
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+       会社紹介セクション
+  ============================================================ -->
+  <section class="about-section" aria-label="About TN Brothers">
+    <div class="section-wrap">
+      <div class="about-grid">
+
+        <!-- 左：テキスト -->
+        <div>
+          <div class="section-label fade-in">About TN Brothers</div>
+
+          <h2 class="section-title fade-in" style="transition-delay: 0.1s;">
+            A Vision<br>
+            <em>Beyond Borders</em>
+          </h2>
+
+          <!-- 引用文 -->
+          <blockquote class="about-quote fade-in" style="transition-delay: 0.15s;">
+            "We Invest In The Future Of Industries"
+          </blockquote>
+
+          <!-- 会社紹介文
+               ここのテキストを変更すると会社紹介文が変わります -->
+          <p class="about-text fade-in" style="transition-delay: 0.2s;">
+            TN Brothers is a global investment company based in Hong Kong.
+            We focus on strategic investments across multiple industries including
+            real estate, healthcare, energy, hospitality, and food businesses.
+          </p>
+          <p class="about-text fade-in" style="transition-delay: 0.25s;">
+            Our mission is to create sustainable long-term value through
+            innovative investment strategies that stand the test of time.
+          </p>
+
+          <!-- 会社データ -->
+          <div class="about-data fade-in" style="transition-delay: 0.3s;">
+            <div class="about-data-item">
+              <div class="about-data-label">Founded</div>
+              <div class="about-data-value">TN Brothers</div>
+            </div>
+            <div class="about-data-item">
+              <div class="about-data-label">Location</div>
+              <div class="about-data-value">Hong Kong</div>
+            </div>
+            <div class="about-data-item">
+              <div class="about-data-label">Focus</div>
+              <div class="about-data-value">Multi-Sector</div>
+            </div>
+            <div class="about-data-item">
+              <div class="about-data-label">Strategy</div>
+              <div class="about-data-value">Long-Term</div>
+            </div>
+          </div>
+
+          <a href="company.html" class="btn-outline fade-in" style="margin-left: 0; margin-top: 40px; transition-delay: 0.35s; display: inline-flex;">
+            <span>Learn More</span>
+            <span class="arrow-right" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <!-- 右：ビジュアル -->
+        <div class="about-visual fade-in-right" style="transition-delay: 0.2s;">
+          <div class="about-visual-box">
+            <!-- 背景の装飾SVG -->
+            <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.06;" viewBox="0 0 400 500" fill="none" aria-hidden="true">
+              <circle cx="200" cy="250" r="180" stroke="#c9a84c" stroke-width="0.8"/>
+              <circle cx="200" cy="250" r="120" stroke="#c9a84c" stroke-width="0.5"/>
+              <circle cx="200" cy="250" r="60"  stroke="#c9a84c" stroke-width="0.3"/>
+              <line x1="20"  y1="250" x2="380" y2="250" stroke="#c9a84c" stroke-width="0.5"/>
+              <line x1="200" y1="70"  x2="200" y2="430" stroke="#c9a84c" stroke-width="0.5"/>
+            </svg>
+            <div class="about-visual-inner">
+              <span class="about-visual-logo">TN</span>
+              <span class="about-visual-sub">Global Investment</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+       世界地図エフェクトセクション
+  ============================================================ -->
+  <section style="position: relative; padding: 120px 60px; overflow: hidden; background: var(--color-black);" aria-label="Global Reach">
+
+    <!-- Canvasエフェクト（script.js で描画） -->
+    <canvas id="worldMapCanvas" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.28;" aria-hidden="true"></canvas>
+
+    <!-- 放射グロー -->
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse 60% 70% at 50% 50%, rgba(201,168,76,0.04), transparent);" aria-hidden="true"></div>
+
+    <!-- コンテンツ -->
+    <div style="position: relative; z-index: 2; max-width: var(--max-width); margin: 0 auto; text-align: center;">
+      <div class="section-label fade-in" style="justify-content: center;">Global Reach</div>
+      <h2 class="section-title fade-in" style="transition-delay: 0.1s;">
+        Investing Across<br>
+        <em>The World</em>
+      </h2>
+      <p class="section-lead fade-in" style="margin: 0 auto; text-align: center; transition-delay: 0.2s;">
+        From Hong Kong to the globe — our investments span<br>
+        continents, cultures, and industries.
+      </p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+       投資分野セクション
+  ============================================================ -->
+  <section style="padding: 120px 60px; max-width: var(--max-width); margin: 0 auto;" aria-label="Investment Fields">
+
+    <div class="section-label fade-in">Investment Fields</div>
+    <h2 class="section-title fade-in" style="transition-delay: 0.1s;">
+      Strategic<br>
+      <em>Portfolios</em>
+    </h2>
+
+    <!-- 投資分野グリッド -->
+    <div class="fields-grid fade-in" style="transition-delay: 0.2s;">
+
+      <!-- 01 不動産 -->
+      <article class="field-card">
+        <span class="field-number">01</span>
+        <!-- SVGアイコン：建物 -->
+        <svg class="field-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="20" width="32" height="20" stroke="#c9a84c" stroke-width="1.4"/>
+          <polyline points="2,22 22,6 42,22" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+          <rect x="18" y="30" width="8" height="10" stroke="#c9a84c" stroke-width="1"/>
+          <rect x="10" y="25" width="6" height="5" stroke="#c9a84c" stroke-width="0.8"/>
+          <rect x="28" y="25" width="6" height="5" stroke="#c9a84c" stroke-width="0.8"/>
+        </svg>
+        <h3 class="field-title">Real Estate</h3>
+        <p class="field-desc">
+          Premium commercial and residential properties across key global markets,
+          focusing on long-term capital appreciation.
+        </p>
+        <a href="investment.html" class="field-link">
+          Explore <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <!-- 02 医療 -->
+      <article class="field-card">
+        <span class="field-number">02</span>
+        <!-- SVGアイコン：十字 -->
+        <svg class="field-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="18" stroke="#c9a84c" stroke-width="1.4"/>
+          <line x1="22" y1="10" x2="22" y2="34" stroke="#c9a84c" stroke-width="2"/>
+          <line x1="10" y1="22" x2="34" y2="22" stroke="#c9a84c" stroke-width="2"/>
+        </svg>
+        <h3 class="field-title">Healthcare</h3>
+        <p class="field-desc">
+          Investments in cutting-edge medical technology, healthcare infrastructure,
+          and pharmaceutical innovation.
+        </p>
+        <a href="investment.html" class="field-link">
+          Explore <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <!-- 03 エネルギー -->
+      <article class="field-card">
+        <span class="field-number">03</span>
+        <!-- SVGアイコン：稲妻 -->
+        <svg class="field-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="24,4 10,24 20,24 20,40 34,20 24,20" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+        </svg>
+        <h3 class="field-title">Energy</h3>
+        <p class="field-desc">
+          Sustainable energy projects and infrastructure that power the future
+          of global economies.
+        </p>
+        <a href="investment.html" class="field-link">
+          Explore <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <!-- 04 ホテル -->
+      <article class="field-card">
+        <span class="field-number">04</span>
+        <!-- SVGアイコン：ホテル建物 -->
+        <svg class="field-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="14" width="32" height="26" stroke="#c9a84c" stroke-width="1.4"/>
+          <polyline points="6,14 22,5 38,14" stroke="#c9a84c" stroke-width="1.4" fill="none"/>
+          <line x1="6"  y1="24" x2="38" y2="24" stroke="#c9a84c" stroke-width="0.8"/>
+          <line x1="20" y1="14" x2="20" y2="40" stroke="#c9a84c" stroke-width="0.8"/>
+          <rect x="10" y="17" width="6" height="5"  stroke="#c9a84c" stroke-width="0.7"/>
+          <rect x="28" y="17" width="6" height="5"  stroke="#c9a84c" stroke-width="0.7"/>
+        </svg>
+        <h3 class="field-title">Hospitality</h3>
+        <p class="field-desc">
+          Luxury hotel and resort investments in premier destinations worldwide,
+          delivering exceptional guest experiences.
+        </p>
+        <a href="investment.html" class="field-link">
+          Explore <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <!-- 05 飲食 -->
+      <article class="field-card">
+        <span class="field-number">05</span>
+        <!-- SVGアイコン：フォーク&ナイフ風 -->
+        <svg class="field-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="14" y1="4" x2="14" y2="40" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M10,4 L10,16 Q10,22 14,22 Q18,22 18,16 L18,4" stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+          <line x1="30" y1="4"  x2="30" y2="40" stroke="#c9a84c" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M24,4 Q24,4 30,12 Q36,4 36,4"  stroke="#c9a84c" stroke-width="1.2" fill="none"/>
+        </svg>
+        <h3 class="field-title">Food & Beverage</h3>
+        <p class="field-desc">
+          Strategic investments in innovative dining concepts and premium
+          food & beverage enterprises.
+        </p>
+        <a href="investment.html" class="field-link">
+          Explore <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </article>
+
+      <!-- 06 グローバル -->
+      <article class="field-card">
+        <span class="field-number">06</span>
+        <!-- SVGアイコン：地球 -->
+        <svg class="field-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="18" stroke="#c9a84c" stroke-width="1.4"/>
+          <ellipse cx="22" cy="22" rx="8"  ry="18" stroke="#c9a84c" stroke-width="0.9"/>
+          <line x1="4"  y1="22" x2="40" y2="22" stroke="#c9a84c" stroke-width="0.9"/>
+          <line x1="7"  y1="13" x2="37" y2="13" stroke="#c9a84c" stroke-width="0.6"/>
+          <line x1="7"  y1="31" x2="37" y2="31" stroke="#c9a84c" stroke-width="0.6"/>
+        </svg>
+        <h3 class="field-title">Global Finance</h3>
+        <p class="field-desc">
+          Cross-border financial instruments and opportunities designed
+          for sustained institutional growth.
+        </p>
+        <a href="investment.html" class="field-link">
+          Explore <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </article>
+
+    </div><!-- /fields-grid -->
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============================================================
+       CTAセクション
+  ============================================================ -->
+  <section class="cta-section" aria-label="Call To Action">
+    <div class="section-wrap" style="text-align: center;">
+
+      <div class="section-label fade-in" style="justify-content: center;">
+        TN Brothers
+      </div>
+
+      <h2 class="cta-title fade-in" style="transition-delay: 0.1s;">
+        Ready To<br>
+        <em>Invest In The Future?</em>
+      </h2>
+
+      <p class="cta-sub fade-in" style="transition-delay: 0.2s;">
+        Partner with TN Brothers and build lasting value across global markets.
+      </p>
+
+      <!-- ボタン群 -->
+      <div class="cta-buttons fade-in" style="transition-delay: 0.3s;">
+        <a href="contact.html" class="btn-gold">
+          <span>Contact Us</span>
+          <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+        <a href="investment.html" class="btn-outline">
+          <span>Our Portfolio</span>
+          <span class="arrow-right" aria-hidden="true"></span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       フッター
+  ============================================================ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+
+      <!-- 上段：ブランド＋リンク -->
+      <div class="footer-top">
+
+        <!-- ブランド説明 -->
+        <div class="footer-brand">
+          <a href="index.html" class="footer-brand-logo">TN Brothers</a>
+          <p class="footer-brand-text">
+            Global investment company based in Hong Kong.
+            Building long-term value through strategic investments
+            across multiple industries.
+          </p>
+        </div>
+
+        <!-- カラム1：会社 -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="company.html">Company</a></li>
+            <li><a href="investment.html">Investment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- カラム2：投資分野 -->
+        <div class="footer-col">
+          <h4>Investment</h4>
+          <ul>
+            <li><a href="investment.html">Real Estate</a></li>
+            <li><a href="investment.html">Healthcare</a></li>
+            <li><a href="investment.html">Energy</a></li>
+            <li><a href="investment.html">Hospitality</a></li>
+            <li><a href="investment.html">Food & Beverage</a></li>
+          </ul>
+        </div>
+
+        <!-- カラム3：法的情報 -->
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+      </div><!-- /footer-top -->
+
+      <!-- 下段：コピーライト -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          © 2025 TN Brothers. All Rights Reserved. · Hong Kong
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+
+    </div><!-- /footer-inner -->
+  </footer>
+
+  <!-- JavaScript読み込み -->
+  <script src="script.js"></script>
+
+</body>
+</html>

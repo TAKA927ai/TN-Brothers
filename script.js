@@ -377,40 +377,20 @@ function initGoldGlow() {
   animate();
 }
 
-/* ── フォーム ── */
+/* ── フォーム（Formspree直接送信） ── */
 function initContactForm() {
   var form = document.getElementById('contactForm');
   if (!form) return;
+
+  /* フォーカス演出のみ（送信はFormspreeに直接） */
   form.querySelectorAll('.form-input,.form-textarea,.form-select').forEach(function(input) {
     var group = input.closest('.form-group');
     if (!group) return;
     input.addEventListener('focus', function() { group.classList.add('focused'); });
     input.addEventListener('blur',  function() { group.classList.remove('focused'); });
   });
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var btn  = form.querySelector('.form-submit');
-    var data = LANG[currentLang];
-    var orig = btn.textContent;
-    btn.textContent = currentLang==='jp' ? '送信中...' : 'Sending...';
-    btn.disabled = true;
-    setTimeout(function() {
-      var box = document.getElementById('formSuccess');
-      form.style.display = 'none';
-      if (box) {
-        box.style.display = 'block';
-        var title = box.querySelector('.fs-title');
-        var text  = box.querySelector('.fs-text');
-        if (title && data.form_success_title) title.textContent = data.form_success_title;
-        if (text  && data.form_success_text)  text.textContent  = data.form_success_text;
-      }
-      setTimeout(function() {
-        form.style.display=''; form.reset();
-        btn.textContent=orig; btn.disabled=false;
-        if (box) box.style.display='none';
-      }, 3000);
-    }, 1500);
-  });
+
+  /* e.preventDefault() を使わない → Formspreeに直接POST送信される */
 }
 
 /* ── スムーズスクロール ── */
